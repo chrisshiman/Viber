@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Task Manager App
 
-## Getting Started
+A fast, accessible, single-user task manager built with Next.js, TypeScript, and Material UI.  
+All data lives in your browser — no backend, no sign-in, just productivity!
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Quickstart
+
+1. **Clone the repo:**  
+   `git clone <your-repo-url> && cd <repo-folder>`
+
+2. **Install dependencies:**  
+   `pnpm install`
+
+3. **Start the app:**  
+   `pnpm dev`
+
+4. **Open in browser:**  
+   [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js (App Router)
+- TypeScript (strict)
+- Material UI (MUI)
+- LocalStorage (v1)
+- Vercel (deployment)
+
+---
+
+## ✨ Features
+
+- ✅ Create, edit, delete, and complete tasks
+- 🗂️ Task details: title, description, due date, priority
+- 🌗 Light/dark mode (system + manual toggle, persists)
+- 📱 Responsive UI
+- 🧠 Data and theme persist across reloads
+- ♿️ Accessibility & keyboard navigation
+- 🧹 Linting, formatting, basic tests
+
+---
+
+## 📦 Scripts
+
+- `pnpm dev` — Start development server
+- `pnpm build` — Build for production
+- `pnpm lint` — Run ESLint
+- `pnpm typecheck` — TypeScript strict check
+- `pnpm format` — Format code with Prettier
+- `pnpm test` — Run unit/component tests
+
+---
+
+## 🗂️ Project Structure
+
+```
+src/
+  app/
+  components/
+  context/
+  hooks/
+  lib/
+  styles/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧑‍💻 Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **State:** React Context + Reducer
+- **Persistence:** LocalStorage (v1), optional IndexedDB (v2)
+- **Theming:** MUI ThemeProvider, system preference detection
+- **Accessibility:** ARIA, keyboard, color contrast
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📋 Roadmap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [x] MVP: CRUD, theming, persistence, a11y
+- [ ] Sorting & filtering
+- [ ] Import/export tasks
+- [ ] PWA support
+- [ ] Custom categories/tags
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📝 ADRs & Decisions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- No backend/auth for v1
+- Strict TypeScript everywhere
+- Minimal dependencies for fast load
+- Accessibility is non-negotiable
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧑‍🏫 Onboarding
+
+1. Clone, install, and run — see Quickstart above.
+2. Review [`task_manager_app_extremely_granular_step_by_step_implementation_plan.md`](./memory-bank/task_manager_app_extremely_granular_step_by_step_implementation_plan.md) for step-by-step guidance.
+3. All major logic is in `src/context`, `src/lib`, and `src/components`.
+
+---
+
+## 📄 License
+
+MIT
+
+---
+
+## 🤝 Contributing
+
+PRs welcome! Please follow code style and add tests for new features.
+
+---
+
+## 🏁 Deploy
+
+- Vercel: Connect repo, auto-deploy on push to main.
+
+---
+
+## 💡 Limitations
+
+- Single user only
+- No cloud sync or multi-device support (yet)
+- Data stored locally in browser
+
+---
+
+## 📬 Contact
+
+Questions or feedback? Open an issue or reach out via GitHub!
